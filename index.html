@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star wars User login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        section .bg {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        section #circle {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .login {
+            position: relative;
+            color: rgb(57, 86, 156);
+            padding: 70px;
+            border-radius: 140px;
+            width: 420px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(188, 188, 188, 0.009);
+        }
+        
+        .login:hover {
+            transition: 1s ease-in-out;
+            box-shadow: 25px 25px 50px rgba(255, 255, 255, 0.15),-25px -25px 50px rgba(255, 255, 255, 0.15);
+            
+            background-color: rgba(57, 86, 156, 0.25);
+            backdrop-filter: blur(1.7px);
+        }
+
+        .login h2 {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            font-size: 2.3em;
+            font-weight: 600;
+            color: rgb(229, 134, 115);
+            margin-bottom: 3px;
+            margin-top: -40px;
+        }
+
+        .login .inputbox {
+            position: relative;
+        }
+
+        .login .inputbox input {
+            position: relative;
+            width: 100%;
+            padding: 12px 20px;
+            outline: none;
+            font-size: 1.2em;
+            color: rgb(189, 146, 234);
+            border-radius: 6px;
+            background: #fff;
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        .login .inputbox ::placeholder {
+            position: relative;
+        }
+
+        .login .inputbox #btn {
+            position: relative;
+            border: none;
+            background: rgb(58, 86, 157);
+            color: white;
+            cursor: pointer;
+            font-size: 1.25em;
+            font-weight: 500;
+            outline: none;
+            transition: 0.5s;
+        }
+        .login .inputbox #btn:hover {
+            background: rgb(86, 127, 233);
+        }
+        .login .group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .login .group a{
+            color: rgb(189, 146, 234);
+            font-size: 1.2em;
+            text-decoration: dashed;
+            font-weight: 100;
+        }
+        .login .group a:nth-child(2) {
+            text-decoration: dashed;
+            margin-left: 50px;
+        }
+
+        .login .group a:hover {
+            color: rgb(86, 127, 233);
+            text-decoration: dashed;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <img src="star-wars.jpg" class="bg">
+        <div class="login">
+            <h2>Sign in</h2>
+            <div class="inputbox">
+                <input type="text" placeholder="example@gmail.com">
+            </div>
+            <div class="inputbox">
+                <input type="password" placeholder="**********">
+            </div>
+            <div class="inputbox">
+                <input id="btn" type="button" value="Log in">
+            </div>
+            <div class="group">
+                <a href="#">Forgot password</a>
+                <a href="#">Sign up</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
